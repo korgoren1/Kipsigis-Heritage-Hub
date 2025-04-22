@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Kipsigis People</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Typography */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Main Container */
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Sections Styling */
+section {
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Titles */
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #0056b3;
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #0056b3;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    table, th, td {
+        font-size: 0.9rem;
+    }
+}
+
+/* Alternating Styles for Sections */
+
+/* Style for Section 1 */
+#military, #precolonial-history {
+    background-color: #f1f8ff;
+    border-left: 5px solid #007bff;
+}
+
+#military h2, #precolonial-history h2 {
+    color: #007bff;
+}
+
+/* Style for Section 2 */
+#orgoik, #provisions-oorgoiik {
+    background-color: #e3f2fd;
+    border-left: 5px solid #17a2b8;
+}
+
+#orgoik h2, #provisions-oorgoiik h2 {
+    color: #17a2b8;
+}
+
+/* Style for Section 3 */
+#kipchomber-arap-koilege, #chebochok-kiptonui-arap-boisio {
+    background-color: #f8d7da;
+    border-left: 5px solid #dc3545;
+}
+
+#kipchomber-arap-koilege h2, #chebochok-kiptonui-arap-boisio h2 {
+    color: #dc3545;
+}
+
+/* Style for Section 4 */
+#colonial-history, #community-politics {
+    background-color: #7c9914;
+    border-left: 5px solid #28a745;
+    color: blue;
+}
+
+#colonial-history h2, #community-politics h2 {
+    color: #4105e6;
+}
+
+/* Style for Section 5 */
+#prominent-leadership, #presidency {
+    background-color: #e9ecef;
+    border-left: 5px solid #007bff;
+}
+
+#prominent-leadership h2, #presidency h2 {
+    color: #007bff;
+}
+
+/* Style for Section 6 */
+#conflicts, #1992-skirmishes, #2008-post-election-violence, 
+#2018-maa-kipsigis-skirmishes {
+    background-color: #f4f4f4;
+    border-left: 5px solid #d9534f;
+}
+
+#conflicts h2, #1992-skirmishes h2, #2008-post-election-violence h2, 
+#2018-maa-kipsigis-skirmishes h2 {
+    color: #d9534f;
+}
+
+/* Section-specific styles */
+section#military {
+    background-color: #f1f8ff;
+    border-left: 5px solid #007bff;
+}
+
+section#prominent-leadership {
+    background-color: #e9ecef;
+    border-left: 5px solid #28a745;
+}
+
+section#presidency {
+    background-color: #f9f9f9;
+    border-left: 5px solid #28a745;
+}
+
+section#conflicts {
+    background-color: #f4f4f4;
+    border-left: 5px solid #d9534f;
+}
+
+/* Styling for Footer */
+footer {
+    background: olive; /* Soft gradient to match the background */
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+    font-size: 1.2rem;
+    border-top: 2px solid #fff;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+.highlight {
+    color: #120ff3; /* Golden highlight for your name */
+    font-weight: bold;
+}
+
+footer p:last-child {
+    font-style: italic;
+    color: #08d1f5; /* Slightly different color for the last praise message */
+}
+
+footer p {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Enhancements for Table */
+table th {
+    background-color: #0056b3;
+    color: white;
+}
+
+table td, table th {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Animation for Hover Effects */
+section:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Special Formatting for Table */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>The Kipsigis People</h1>
+        <nav>
+            <ul>
+                <li><a href="#origin">Origin</a></li>
+                <li><a href="#culture">Culture</a></li>
+                <li><a href="#food-drinks">Food and Drinks</a></li>
+                <li><a href="#astronomy">Astronomy and Calendar</a></li>
+                <li><a href="#months-seasons">Months and Seasons</a></li>
+                <li><a href="#geopolitical-military">Geopolitical and Military Organisation</a></li>
+                <li><a href="#generations">Generations</a></li>
+                <li><a href="#geopolitical-organization">Geopolitical Organization</a></li>
+                <li><a href="#king">The Office of the King (Oorgoiiyoot)</a></li>
+                <li><a href="#military">Military Organisation</a></li>
+                <li><a href="#precolonial-history">Precolonial History</a></li>
+                <li><a href="#menya-arap-kisiara">Menya Arap Kisiara</a></li>
+                <li><a href="#orgoik">Orgoik</a></li>
+                <li><a href="#kipchomber-arap-koilege">Kipchomber arap Koilege</a></li>
+                <li><a href="#chebochok-kiptonui-arap-boisio">Chebochok Kiptonui arap Boisio</a></li>
+                <li><a href="#mugenik-barngetuny-arap-sitonik">Mugenik Barngetuny Araap Sitonik</a></li>
+                <li><a href="#colonial-history">Colonial History</a></li>
+                <li><a href="#community-politics">Community Politics</a></li>
+                <li><a href="#prominent-leadership">Prominent Leadership</a></li>
+                <li><a href="#presidency">Presidency</a></li>
+                <li><a href="#mau-settlement">MAU Settlement Programs and Evictions</a></li>
+                <li><a href="#provisions-oorgoiik">Provisions for Oorgoiik</a></li>
+                <li><a href="#conflicts">Conflicts and Violence</a></li>
+                <li><a href="#1992-skirmishes">1992 Skirmishes</a></li>
+                <li><a href="#2008-post-election-violence">2008 Post-election Violence</a></li>
+                <li><a href="#2018-maa-kipsigis-skirmishes">2018 Maa-Kipsigis Skirmishes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- 1. Origin Section -->
+        <section id="origin">
+            <h2>Origin</h2>
+            <p>The Kipsigis people are part of the larger Kalenjin ethnic group. Their ancestors are believed to have migrated from the Sudanese region, particularly from the areas around the Nile River, sometime during the 15th century. Over centuries, the Kipsigis settled in what is now the Rift Valley region of Kenya, particularly in Bomet, Kericho, and parts of Nakuru counties. They established themselves as a dominant agricultural community, relying on their fertile lands for crop cultivation and livestock rearing. The Kipsigis people’s history is closely tied to their location, with their migration patterns, cultural evolution, and socio-political organization all influenced by the geographical region they settled in.</p>
+        </section>
+
+        <!-- 2. Culture Section -->
+        <section id="culture">
+            <h2>Culture</h2>
+            <p>The Kipsigis culture is deeply rooted in their traditional practices, including their oral history, rituals, dances, and societal organization. One of the most important aspects of Kipsigis culture is their agricultural lifestyle, with farming being a central part of their daily life. The Kipsigis people practice polygamy, a common cultural practice among many Nilotic communities. Their culture also involves the use of sacred spaces for rituals and sacrifices to the spirits. Music, dance, and song are integral to their social gatherings, especially during important life events like birth, initiation, marriage, and death. The Kipsigis have a rich oral tradition, passing down stories, myths, and historical events through storytelling.</p>
+        </section>
+
+        <!-- 3. Food and Drinks Section -->
+        <section id="food-drinks">
+            <h2>Food and Drinks</h2>
+            <p>The Kipsigis people traditionally consume a diet based on agricultural products. Maize, millet, beans, and potatoes are the primary staples, and these are prepared in a variety of ways, including as porridge, stew, and cooked grains. They also rely heavily on livestock for both food and cultural practices. Cattle, goats, and sheep are common livestock, with their milk being a significant part of their diet. Fermented milk is a traditional drink. Additionally, local brews made from millet, sorghum, and honey are popular, especially during ceremonial events and social gatherings.</p>
+        </section>
+
+        <!-- 4. Astronomy and Calendar Section -->
+        <section id="astronomy">
+            <h2>Astronomy and Calendar</h2>
+            <p>The Kipsigis people have an advanced understanding of astronomy, particularly in relation to the lunar cycle and the movement of celestial bodies. This knowledge is closely tied to their agricultural activities, with planting and harvesting times being influenced by the phases of the moon. They also use stars for navigation and timekeeping, employing their own lunar calendar known as the Arawak. The calendar, along with their astronomical observations, plays a crucial role in determining agricultural activities, religious ceremonies, and social events.</p>
+        </section>
+
+        <!-- 5. Months and Seasons Section -->
+        <section id="months-seasons">
+            <h2>Months and Seasons</h2>
+            <p>The Kipsigis lunar calendar is divided into months known as Arawak. These months are significant as they guide the agricultural cycles and seasonal changes. The Kipsigis people base their farming and community activities around these months, which are influenced by both the lunar and solar cycles. The calendar also aligns with the dry and rainy seasons, which are crucial for crop production.</p>
+            <section id="months-seasons">
+                <h3>Months (Arawak) and Seasons</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Local Name</th>
+                            <th>Meaning/Significance</th>
+                            <th>Western Equivalent</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>1st Month</td>
+                            <td>Ngotioto</td>
+                            <td>Month of pin-cushion plant</td>
+                            <td>January</td>
+                        </tr>
+                        <tr>
+                            <td>2nd Month</td>
+                            <td>Kiptamo</td>
+                            <td>Hot in the fields</td>
+                            <td>February</td>
+                        </tr>
+                        <tr>
+                            <td>3rd Month</td>
+                            <td>Iwat-kut</td>
+                            <td>Rain in showers</td>
+                            <td>March</td>
+                        </tr>
+                        <tr>
+                            <td>4th Month</td>
+                            <td>Wake / Iwootkuut</td>
+                            <td>–</td>
+                            <td>April</td>
+                        </tr>
+                        <tr>
+                            <td>5th Month</td>
+                            <td>Ngei</td>
+                            <td>Heart pushed on one side by hunger</td>
+                            <td>May</td>
+                        </tr>
+                        <tr>
+                            <td>6th Month</td>
+                            <td>Rob-tui</td>
+                            <td>Black rain or black clouds</td>
+                            <td>June</td>
+                        </tr>
+                        <tr>
+                            <td>7th Month</td>
+                            <td>Puret</td>
+                            <td>Mist</td>
+                            <td>July</td>
+                        </tr>
+                        <tr>
+                            <td>8th Month</td>
+                            <td>Epeso</td>
+                            <td>–</td>
+                            <td>August</td>
+                        </tr>
+                        <tr>
+                            <td>9th Month</td>
+                            <td>Kipsunde</td>
+                            <td>Offering to God in the cornfields</td>
+                            <td>September</td>
+                        </tr>
+                        <tr>
+                            <td>10th Month</td>
+                            <td>Kipsunde oieng</td>
+                            <td>Second offering to God</td>
+                            <td>October</td>
+                        </tr>
+                        <tr>
+                            <td>11th Month</td>
+                            <td>Mulkul</td>
+                            <td>Strong wind</td>
+                            <td>November</td>
+                        </tr>
+                        <tr>
+                            <td>12th Month</td>
+                            <td>Mulkulik oieng</td>
+                            <td>Second strong wind</td>
+                            <td>December</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+
+        <!-- 6. Geopolitical and Military Organisation Section -->
+        <section id="geopolitical-military">
+            <h2>Geopolitical and Military Organisation</h2>
+            <p>The Kipsigis people traditionally had a well-structured geopolitical and military system. Their society was organized into clans, each with its own leadership. These clans were led by respected elders and chiefs who had significant influence over the affairs of the people. The Kipsigis had a robust military system, with warriors known as Boti who protected their land, resources, and communities. The military organization was based on coordination, unity, and strategic defense, often using spears and shields in battle. The military's role was not only to defend but also to maintain order within the community.</p>
+        </section>
+
+        <!-- 7. Generations Section -->
+        <section id="generations">
+            <h2>Generations</h2>
+            <p>Generations play a vital role in Kipsigis society. The community is structured around age-sets and clans, with elders being the respected decision-makers and younger generations responsible for maintaining traditions and contributing to the community's growth. The concept of generations is also central to their social organization, with specific roles assigned to each age group. Elders are responsible for the wisdom and guidance passed down to younger members, who in turn learn and continue the practices of their forefathers.</p>
+            <h3>Demographic Management & Generational Cycles</h3>
+            <table border="1">
+                <thead>
+                  <tr>
+                    <th>Set</th>
+                    <th>Years</th>
+                    <th>Western Equivalent</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="3">Nyonji</td>
+                    <td>1st cycle: 1783 to 1801 (19 years)</td>
+                    <td>–</td>
+                    <td>Plausible adoption era of circumcision and initiation</td>
+                  </tr>
+                  <tr>
+                    <td>2nd cycle: 1905 to 1920 (16 yrs)</td>
+                    <td>Interbellum Generation / The Greatest Generation</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>3rd cycle: 2019 onwards</td>
+                    <td>Gen Alpha</td>
+                    <td>Social Network generation</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">Maina</td>
+                    <td>1st cycle: 1802 to 1819 (18 yrs)</td>
+                    <td>–</td>
+                    <td>–</td>
+                  </tr>
+                  <tr>
+                    <td>2nd cycle: 1921 to 1936 (16 yrs)</td>
+                    <td>Silent Generation</td>
+                    <td>King’s African Rifles and World War era generation</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">Chumo</td>
+                    <td>1st cycle: 1820 to 1836 (17 yrs)</td>
+                    <td>–</td>
+                    <td>–</td>
+                  </tr>
+                  <tr>
+                    <td>2nd cycle: 1937 to 1951 (15 yrs)</td>
+                    <td>Silent Generation / Baby Boomer Generation</td>
+                    <td>–</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">Sawe</td>
+                    <td>1st cycle: 1837 to 1853 (17 yrs)</td>
+                    <td>–</td>
+                    <td>Remembered for the failed war of Ng’oino</td>
+                  </tr>
+                  <tr>
+                    <td>2nd cycle: 1952 to 1966 (15 yrs)</td>
+                    <td>Baby Boomer Generation</td>
+                    <td>Post war and independence era</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">Kerongoro</td>
+                    <td>1st cycle: 1854 to 1870 (17 yrs)</td>
+                    <td>–</td>
+                    <td>–</td>
+                  </tr>
+                  <tr>
+                    <td>2nd cycle: 1967 to 1981 (15 yrs)</td>
+                    <td>Generation X / Xennials</td>
+                    <td>–</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">Kaplelach</td>
+                    <td>1st cycle: 1871 to 1887 (17 yrs)</td>
+                    <td>The Lost Generation</td>
+                    <td>Remembered for the failed war of Mogori</td>
+                  </tr>
+                  <tr>
+                    <td>2nd cycle: 1982 to 1999 (18 yrs)</td>
+                    <td>Xennials / Millennials</td>
+                    <td>Daniel Moi’s free primary education era</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">Kipnyige</td>
+                    <td>1st cycle: 1888 to 1904 (17 yrs)</td>
+                    <td>Interbellum Generation</td>
+                    <td>–</td>
+                  </tr>
+                  <tr>
+                    <td>2nd cycle: 2000 to 2018 (19 yrs)</td>
+                    <td>Generation Z</td>
+                    <td>Technology and civil liberties generation</td>
+                  </tr>
+                </tbody>
+              </table>
+
+        </section>
+
+        <!-- 8. Geopolitical Organization Section -->
+        <section id="geopolitical-organization">
+            <h2>Geopolitical Organization</h2>
+            <p>The geopolitical organization of the Kipsigis people revolves around clan-based leadership. The clans are the building blocks of their political structure, with each clan having a chief or elder who represents their interests. The leadership system was historically hierarchical, with the Oorgoiiyoot (the king or paramount chief) at the top. Below him were other leaders who managed smaller groups or villages. The community's decisions were often made collectively by elders and leaders, ensuring that every clan's voice was heard.</p>
+        </section>
+
+        <!-- 9. The Office of the King Section -->
+        <section id="king">
+            <h2>The Office of the King (Oorgoiiyoot)</h2>
+            <p>The position of the Oorgoiiyoot, the king or paramount chief, was one of the most prestigious in Kipsigis society. This leader was responsible for overseeing all matters within the community, including military affairs, trade, and religious rituals. The Oorgoiiyoot was selected based on merit, wisdom, and leadership ability, and the position was typically passed down within a specific family or clan. The Oorgoiiyoot held a significant amount of power, as they were the central figure in maintaining order and cohesion within Kipsigis society.</p>
+        </section>
+
+        <!-- 10. Military Organisation Section -->
+        <section id="military">
+            <h2>Military Organisation</h2>
+            <p>The Kipsigis people had a strong military tradition, with young men being trained in combat and warfare from an early age. The primary focus of military organization was defense, and warriors (Boti) were responsible for protecting their land from external threats. Military training involved rigorous exercises, physical conditioning, and mastery of weaponry, particularly spears and shields. During times of war, warriors would band together under the leadership of the king or paramount chief to protect their communities and ensure their survival.</p>
+            <h3>Significant wars and battles</h3>
+            <table border="1">
+                <thead>
+                  <tr>
+                    <th>Battle</th>
+                    <th>Estimated Year</th>
+                    <th>Generation</th>
+                    <th>War Front</th>
+                    <th>Commander</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Battle of Mabasi</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Kaplong war</td>
+                    <td>1870</td>
+                    <td></td>
+                    <td>Kaplong/Sotik</td>
+                    <td>Menya Arap Kisiara</td>
+                    <td>The Kipsigis emerged victorious and defeated Maasai with the latter disavowing what is today Bomet county and Narok West constituency.</td>
+                  </tr>
+                  <tr>
+                    <td>Battle of Ng’oino</td>
+                    <td>1850</td>
+                    <td>1st cycle Sawe</td>
+                    <td>Bureti/Roret</td>
+                    <td></td>
+                    <td>The Kipsigis army was defeated and had to restructure their regiment system.</td>
+                  </tr>
+                  <tr>
+                    <td>Battle of Tiritiab Moita</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Battle of Kibongwa</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Battle of Chemelet</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Battle of Kipsabanut</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Battle of Benjo</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Chemoiben War</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Mogori war (Saosao war in Gusi)</td>
+                    <td>1885</td>
+                    <td>1st cycle Kaplelach</td>
+                    <td></td>
+                    <td>Malabun Arap Makiche</td>
+                    <td>The legion of armies was decimated at a 99.5% rate making it Kipsigis’ most infamous and tragic war with profound effects.</td>
+                  </tr>
+                </tbody>
+              </table>
+        </section>
+
+        <!-- 11. Precolonial History Section -->
+        <section id="precolonial-history">
+            <h2>Precolonial History</h2>
+            <p>Before colonial rule, the Kipsigis people enjoyed relative autonomy and control over their lands. They were organized in a manner that allowed them to resist external threats, particularly from rival groups. Their history was shaped by internal struggles, tribal conflicts, and competition for resources. They also had a complex system of governance, with leaders and elders guiding decisions and disputes. This period was marked by their interactions with neighboring ethnic groups, including the Maasai, Kikuyu, and Luo, leading to both cooperation and conflict.</p>
+        </section>
+
+        <!-- 12. Menya Arap Kisiara Section -->
+        <section id="menya-arap-kisiara">
+            <h2>Menya Arap Kisiara</h2>
+            <p>Menya Arap Kisiara was one of the most prominent Kipsigis leaders during the early 20th century. He was instrumental in leading his people during the colonial era and advocating for the rights of the Kipsigis. His leadership was marked by resistance to British colonial rule, particularly during the early days of European settlement in the Rift Valley. Menya's legacy is one of strength, resilience, and a commitment to preserving the culture and rights of the Kipsigis people.</p>
+        </section>
+
+        <!-- 13. Orgoik Section -->
+        <section id="orgoik">
+            <h2>Orgoik</h2>
+            <p>Orgoik was a traditional Kipsigis ritual of war preparation. It was practiced during times of conflict, where the Kipsigis would gather to strategize, perform ceremonies, and prepare mentally for the battles ahead. This ritual was significant not only in terms of military preparedness but also for its role in strengthening the bond among the warriors. The rituals performed during Orgoik were deeply spiritual, with offerings made to the ancestors for protection and guidance in battle.</p>
+        </section>
+
+        <!-- 14. Kipchomber Arap Koilege Section -->
+        <section id="kipchomber-arap-koilege">
+            <h2>Kipchomber arap Koilege</h2>
+            <p>Kipchomber arap Koilege was a famous Kipsigis warrior and leader who played a key role during the colonial era, particularly in the resistance against British colonial forces. His leadership was pivotal during the Mau Mau resistance movement, and he is remembered for his bravery and commitment to the cause of freedom. Kipchomber's actions set the stage for the Kipsigis people's broader participation in the independence struggle.</p>
+        </section>
+
+        <!-- 15. Chebochok Kiptonui arap Boisio Section -->
+        <section id="chebochok-kiptonui-arap-boisio">
+            <h2>Chebochok Kiptonui arap Boisio</h2>
+            <p>Chebochok Kiptonui arap Boisio was another Kipsigis leader known for his involvement in the resistance against colonial rule. He led many campaigns against British forces during the period of the First World War and beyond, earning a reputation for his strategic intelligence and leadership. His contributions were critical to the Kipsigis people's involvement in the larger struggle for independence in Kenya.</p>
+        </section>
+
+        <!-- 16. Mugenik Barngetuny Arap Sitonik Section -->
+        <section id="mugenik-barngetuny-arap-sitonik">
+            <h2>Mugenik Barngetuny Arap Sitonik</h2>
+            <p>Mugenik Barngetuny Arap Sitonik was another notable leader from the Kipsigis community during the period leading up to and during the Mau Mau uprising. His resistance against the colonial government focused on advocating for the rights and protection of his people, especially in the face of increasing colonial aggression. His leadership skills and strategic approach to organizing resistance efforts made him a critical figure in Kipsigis history.</p>
+        </section>
+
+        <!-- 17. Colonial History Section -->
+        <section id="colonial-history">
+            <h2>Colonial History</h2>
+            <p>The colonial history of the Kipsigis people was marked by significant struggles against the British colonial regime. Like many other ethnic groups in Kenya, the Kipsigis faced land dispossession, forced labor, and various forms of oppression. The British settlers seized large parts of the fertile land in the Rift Valley, which had a devastating impact on the Kipsigis way of life. Despite these challenges, the Kipsigis people resisted colonialism through both peaceful means and armed uprisings.</p>
+        </section>
+
+        <!-- 18. Community Politics Section -->
+        <section  id="community-politics">
+            <h2>Community Politics</h2>
+            <p>Community politics among the Kipsigis people were traditionally rooted in a council of elders known as the "Loogor". The Loogor played a central role in making decisions concerning the welfare of the community, such as resource management, conflict resolution, and cultural practices. The Kipsigis also had a system of rotating leadership, where power was shared among clans to ensure fairness and balance. This system provided a level of stability within the community and encouraged unity.</p>
+        </section>
+
+        <!-- 19. Prominent Leadership Section -->
+        <section id="prominent-leadership">
+            <h2>Prominent Leadership</h2>
+            <p>The Kipsigis have produced a range of prominent leaders who have contributed to the history and development of the region. From resistance leaders during the colonial period to contemporary figures in politics, education, and social movements, these leaders have played critical roles in shaping the trajectory of the Kipsigis people. Their legacy continues to inspire future generations.</p>
+        </section>
+
+        <!-- 20. Presidency Section -->
+        <section id="presidency">
+            <h2>Presidency</h2>
+            <p>As Kenya moved toward independence, the Kipsigis people played a significant role in the political development of the country. One of the most notable Kipsigis figures in Kenyan politics was Daniel arap Moi, who served as the President of Kenya from 1978 to 2002. His presidency marked a period of political change in Kenya, with his leadership shaping the direction of the country's governance and development.</p>
+        </section>
+
+        <!-- 21. Mau Settlement Section -->
+        <section id="mau-settlement">
+            <h2>MAU Settlement Programs and Evictions</h2>
+            <p>The Mau settlement programs, initiated during the colonial period, resulted in forced evictions of many Kipsigis people from their ancestral land in the Mau forest. These evictions were part of broader efforts to settle European farmers in the Rift Valley, and the effects were felt deeply by the Kipsigis community. Over time, the Mau forest became a symbol of both resistance and dispossession. Efforts to restore the rights of the people to the Mau forest have been ongoing for decades.</p>
+        </section>
+
+        <!-- 22. Provisions for Oorgoiik Section -->
+        <section id="provisions-oorgoiik">
+            <h2>Provisions for Oorgoiik</h2>
+            <p>The office of Oorgoiik, or the paramount chief, was supported by the community through various provisions, including livestock, land, and tribute from other clans. The role of Oorgoiik was not only political but also spiritual, with the leader serving as a guide and protector of the people. Provisions were made to ensure the stability and continuity of the office, with each clan expected to contribute resources to maintain the leadership.</p>
+        </section>
+
+        <!-- 23. Conflicts and Violence Section -->
+        <section id="conflicts">
+            <h2>Conflicts and Violence</h2>
+            <p>Throughout their history, the Kipsigis people have been involved in numerous conflicts, both internally and externally. These conflicts often arose over land disputes, political differences, and cultural tensions. Despite their peaceful traditions, the Kipsigis were also forced to defend themselves in violent situations, particularly during colonialism and the struggle for independence. The legacy of these conflicts continues to influence Kipsigis political and social dynamics today.</p>
+        </section>
+
+        <!-- 24. 1992 Skirmishes Section -->
+        <section id="1992-skirmishes">
+            <h2>1992 Skirmishes</h2>
+            <p>The 1992 skirmishes were a significant period of violence and ethnic conflict between the Kipsigis and other communities in Kenya. These skirmishes were primarily triggered by political rivalries and ethnic tensions, with the Kipsigis being involved in violent confrontations. Many lives were lost during this period, and the scars of these conflicts are still felt within Kipsigis communities today.</p>
+        </section>
+
+        <!-- 25. 2008 Post-election Violence Section -->
+        <section id="2008-post-election-violence">
+            <h2>2008 Post-election Violence</h2>
+            <p>The 2008 post-election violence in Kenya was another traumatic event for the Kipsigis people. Following the disputed election results, ethnic violence erupted across the country, with the Kipsigis being affected both directly and indirectly. Thousands were displaced from their homes, and many lost their lives during the violence. Efforts to reconcile and rebuild the community continue to this day.</p>
+        </section>
+
+        <!-- 26. 2018 Maa-Kipsigis Skirmishes Section -->
+        <section id="2018-maa-kipsigis-skirmishes">
+            <h2>2018 Maa-Kipsigis Skirmishes</h2>
+            <p>The 2018 skirmishes between the Kipsigis and the Maa community were yet another chapter in the Kipsigis' complex history. These skirmishes were sparked by long-standing disputes over land and resource distribution, and they resulted in clashes that left many people displaced and wounded. The conflict served as a reminder of the ongoing struggles for land rights and political influence in the region.</p>
+        </section>
+
+    </main>
+
+    <footer>
+            <div class="footer-content">
+                <p>Created with ❤️ by <span class="highlight">Ezra Ngetich Korgoren</span></p>
+                <p>Dedicated to those who make love, life, and history beautiful. Always striving, always learning, always creating. 🌟</p>
+                <p>For the dreamers, the doers, and the believers. You are loved. ✨</p>
+                <p>Every line of code, every step forward, is a piece of history in the making. Here's to shaping the future, one pixel at a time. ⏳</p>
+            </div>
+        
+    </footer>
+
+</body>
+</html>
