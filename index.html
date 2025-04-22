@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -247,6 +248,42 @@ section:hover {
         overflow-x: auto;
         white-space: nowrap;
     }
+}
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #3f2b96;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #a8c0ff;
 }
 
     </style>
@@ -725,6 +762,18 @@ section:hover {
         </section>
 
     </main>
+    <h1 style="text-align: center;color: gold;background-color: #333;">leave your comment here</h1>
+    <form action="https://formspree.io/f/xvgaozve" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+    
+        
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+    
+        <button type="submit">Send Message</button>
+    </form>
+    
 
     <footer>
             <div class="footer-content">
